@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		14DBE70226FF3DF000774AFE /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14DBE70126FF3DF000774AFE /* main.cpp */; };
+		14DBE70A26FF3E8400774AFE /* DataBase.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14DBE70926FF3E8400774AFE /* DataBase.cpp */; };
+		14DBE70D26FF3EE000774AFE /* Data.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14DBE70C26FF3EE000774AFE /* Data.cpp */; };
+		14DBE71126FF439300774AFE /* Table.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14DBE71026FF439300774AFE /* Table.cpp */; };
+		14DBE71526FF453E00774AFE /* Parser.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14DBE71426FF453E00774AFE /* Parser.cpp */; };
+		14DBE71726FF493100774AFE /* Row.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 14DBE71626FF493100774AFE /* Row.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +30,16 @@
 /* Begin PBXFileReference section */
 		14DBE6FE26FF3DF000774AFE /* DataBase */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DataBase; sourceTree = BUILT_PRODUCTS_DIR; };
 		14DBE70126FF3DF000774AFE /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		14DBE70826FF3E1D00774AFE /* DataBase.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DataBase.h; sourceTree = "<group>"; };
+		14DBE70926FF3E8400774AFE /* DataBase.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = DataBase.cpp; sourceTree = "<group>"; };
+		14DBE70C26FF3EE000774AFE /* Data.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Data.cpp; sourceTree = "<group>"; };
+		14DBE70E26FF3EE700774AFE /* Data.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Data.h; sourceTree = "<group>"; };
+		14DBE70F26FF42CA00774AFE /* Table.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Table.h; sourceTree = "<group>"; };
+		14DBE71026FF439300774AFE /* Table.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Table.cpp; sourceTree = "<group>"; };
+		14DBE71226FF43E800774AFE /* Row.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Row.h; sourceTree = "<group>"; };
+		14DBE71326FF453100774AFE /* Parser.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Parser.h; sourceTree = "<group>"; };
+		14DBE71426FF453E00774AFE /* Parser.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Parser.cpp; sourceTree = "<group>"; };
+		14DBE71626FF493100774AFE /* Row.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Row.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +73,16 @@
 			isa = PBXGroup;
 			children = (
 				14DBE70126FF3DF000774AFE /* main.cpp */,
+				14DBE70826FF3E1D00774AFE /* DataBase.h */,
+				14DBE70926FF3E8400774AFE /* DataBase.cpp */,
+				14DBE70E26FF3EE700774AFE /* Data.h */,
+				14DBE70C26FF3EE000774AFE /* Data.cpp */,
+				14DBE70F26FF42CA00774AFE /* Table.h */,
+				14DBE71026FF439300774AFE /* Table.cpp */,
+				14DBE71226FF43E800774AFE /* Row.h */,
+				14DBE71626FF493100774AFE /* Row.cpp */,
+				14DBE71326FF453100774AFE /* Parser.h */,
+				14DBE71426FF453E00774AFE /* Parser.cpp */,
 			);
 			path = DataBase;
 			sourceTree = "<group>";
@@ -118,6 +143,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				14DBE71726FF493100774AFE /* Row.cpp in Sources */,
+				14DBE70D26FF3EE000774AFE /* Data.cpp in Sources */,
+				14DBE70A26FF3E8400774AFE /* DataBase.cpp in Sources */,
+				14DBE71126FF439300774AFE /* Table.cpp in Sources */,
+				14DBE71526FF453E00774AFE /* Parser.cpp in Sources */,
 				14DBE70226FF3DF000774AFE /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

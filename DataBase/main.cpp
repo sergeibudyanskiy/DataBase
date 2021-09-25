@@ -5,10 +5,16 @@
 //  Created by Sergei Budyanskiy on 25.09.2021.
 //
 
-#include <iostream>
+#include "DataBase.h"
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+int main( int argc, const char * argv[] )
+{
+    DataBase db( "" );
+    
+    db.add_table( "user" );
+    db.add_table( "card" );
+    
+    db.query( "show card" );
+    
     return 0;
 }
