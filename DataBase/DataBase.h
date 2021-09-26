@@ -23,10 +23,9 @@ public:
     
     bool add_table( const std::string& name );
     
-    std::string query( const std::string& command ) const;
-    
+    std::string show( const std::string& table = "" ) const;
+    std::string select( const std::string& table, const std::string& header, const std::size_t& id ) const;
 private:
-    void show_table( const std::string& name ) const;
     
     std::string path_;
     

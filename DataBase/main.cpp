@@ -12,9 +12,10 @@ int main( int argc, const char * argv[] )
     DataBase db( "" );
     
     db.add_table( "user" );
-    db.add_table( "card" );
     
-    db.query( "show card" );
+    std::cout << db.select( "user", "name", 0 ) << std::endl;
+    std::cout << db.select( "user", "surname", 0 ) << std::endl;
+    std::cout << db.select( "user", "age", 0 ) << std::endl;
     
     return 0;
 }

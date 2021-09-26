@@ -19,7 +19,7 @@ public:
     Table parse() const;
     
 private:
-    std::vector<std::string> parse_line( const std::string& line ) const;
+    std::vector<std::string> parse_line( const std::string& line, bool tolower = false ) const;
     std::vector<std::pair<std::size_t, std::string>> parse_header() const;
     std::vector<Row> parse_rows() const;
     

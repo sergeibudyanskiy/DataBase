@@ -32,38 +32,47 @@ bool DataBase::add_table( const std::string& name )
     return result;
 }
 
-std::string DataBase::query( const std::string& command ) const
+std::string DataBase::show( const std::string& table ) const
 {
     std::string result;
     
-    if ( std::string::npos != command.find( "show" ) )
+    if ( !table.length() )
     {
-        std::string name = std::find_if( tables_.begin(), tables_.end(), [&]( const auto& t )
+        for ( const auto& t : tables_ )
         {
-            return std::string::npos != command.find( t.first );
-        })->first;
-        
-        show_table( name );
+            t.second.show();
+        }
     }
-    else
+    else if ( ( result = std::find_if( tables_.begin(), tables_.end(), [&]( const auto& t )
     {
-        
+        return std::string::npos != table.find( t.first );
+    })->first ).length() )
+    {
+        tables_.at( result ).show();
     }
     
     return result;
 }
 
-void DataBase::show_table( const std::string& name ) const
+std::string DataBase::select( const std::string& table, const std::string& header, const std::size_t& id ) const
 {
-    if ( name.length() )
+    std::string result;
+    
+    for ( const auto& t : tables_ )
     {
-        tables_.at( name ).show();
-    }
-    else
-    {
-        for ( const auto& table : tables_ )
+        if ( t.first == table )
         {
-            table.second.show();
+            std::size_t header_index = t.second.get_header_index( header );
+            if ( -1 != header_index )
+            {
+                for ( const auto& t : tables_ )
+                {
+                    result = t.second.get_row( id ).get( header_index );
+                }
+            }
         }
     }
+
+    
+    return result;
 }

@@ -17,6 +17,9 @@ public:
     ~Table();
     
     void show() const;
+    
+    std::size_t get_header_index( const std::string& name ) const;
+    Row get_row( std::size_t index ) const;
 
 private:
     std::string data_;

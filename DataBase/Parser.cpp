@@ -29,7 +29,7 @@ Table Parser::parse() const
     
 }
 
-std::vector<std::string> Parser::parse_line( const std::string& line ) const
+std::vector<std::string> Parser::parse_line( const std::string& line, bool tolower ) const
 {
     std::vector<std::string> result;
     std::size_t begin = 0, end = 0, start = 0;
@@ -39,7 +39,13 @@ std::vector<std::string> Parser::parse_line( const std::string& line ) const
         end = line.find( "\"", ++begin );
         start = end + 1;
         
-        result.emplace_back( line.substr( begin, end - begin ) );
+        std::string item = line.substr( begin, end - begin );
+        if ( tolower )
+        {
+            std::transform( item.begin(), item.end(), item.begin(), ::tolower );
+        }
+        
+        result.emplace_back( item );
     }
     
     return result;
@@ -54,7 +60,7 @@ std::vector<std::pair<std::size_t, std::string>> Parser::parse_header() const
     if ( std::string::npos != ( begin = data_.find( "[", start ) ) )
     {
         end = data_.find( "]", ++begin );
-        line = parse_line( data_.substr( begin, end - begin ) );
+        line = parse_line( data_.substr( begin, end - begin ), true );
         for ( auto& l : line )
         {
             if ( std::string::npos != ( begin = l.find( "|" ) ) )
